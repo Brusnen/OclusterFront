@@ -1,7 +1,8 @@
 <script setup>
-import Home from "./components/Home.vue";
 </script>
 
 <template>
-  <Home></Home>
+  <component :is="$route.meta.layout || 'layout'">
+    <router-view></router-view>
+  </component>
 </template>
